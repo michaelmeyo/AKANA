@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKANA – Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font (Open Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header (common to all pages) -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+  <a href="index.html" class="brand-link" aria-label="AKANA — Home">
+    <img src="images/akana-logo.svg" alt="AKANA logo" width="40" height="40">
+    <span class="badge">AKANA</span>
+  </a>
+</div>
+
+      <nav>
+        <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost" href="#">Member Login</a>
+        <a class="btn primary" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Homepage Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container wrap">
+        <!-- Hero text content -->
+        <div>
+          <span class="badge">Association of Kenyan American Nurse Anesthetists</span>
+          <h1>Unite. Mentor. Advance.<br>Building the next generation of CRNAs.</h1>
+          <p>
+          AKANA connects Kenyan-origin CRNAs and SRNAs across the U.S. through mentorship, 
+          education, advocacy, and mission work in Kenya. Join our growing community, earn 
+          certificates from bite-size trainings, track upcoming events, and support scholarships.
+          </p>
+          <div style="display:flex; gap:0.6rem; flex-wrap: wrap; margin-top: 1rem;">
+            <a class="btn primary" href="membership.html">Join AKANA</a>
+            <a class="btn alt" href="training.html">Start Training</a>
+            <a class="btn warn" href="donate.html">Donate</a>
+          </div>
+          <!-- Kenyan and US flag color bar -->
+          <div class="flagbar" aria-hidden="true" style="margin-top: 1.2rem;">
+            <div class="flag ke" title="Kenyan roots"></div>
+            <div class="flag us" title="American presence"></div>
+          </div>
+        </div>
+        <!-- Hero graphic content (placeholder for slider or highlights) -->
+        <div class="hero-graphic">
+          <div class="grid cards-3">
+            <div class="card">
+              <h3>Membership</h3>
+              <p class="muted">CRNA, SRNA, and RN tiers with easy online signup and automated confirmations.</p>
+            </div>
+            <div class="card">
+              <h3>Training & Certificates</h3>
+              <p class="muted">Self-paced micro-courses with quick quizzes and instant certificates on completion.</p>
+            </div>
+            <div class="card">
+              <h3>Events</h3>
+              <p class="muted">Webinars, meet-ups, and conferences with simple RSVP and calendar add-ons.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE PROPOSITIONS -->
+    <section>
+      <div class="container grid cards-3">
+        <div class="card">
+  <span class="pill">Why AKANA</span>
+  <h3>Empowering Kenyan Nurse Anesthetists</h3>
+  <p class="muted">We unite and uplift Kenyan-origin nurse anesthetists across the U.S. and Kenya through mentorship, advocacy, continuing education, and global collaboration.</p>
+</div>
+
+<div class="card">
+  <span class="pill">Global & Connected</span>
+  <h3>Bridging Kenya and the Diaspora</h3>
+  <p class="muted">AKANA connects professionals in North America with colleagues and training institutions in Kenya, advancing anesthesia practice, research, and leadership capacity worldwide.</p>
+</div>
+
+<div class="card">
+  <span class="pill">Trust & Impact</span>
+  <h3>Transparent and accountable</h3>
+  <p class="muted">Our members and donors track where every contribution goes—supporting scholarships, capacity-building missions, and lifesaving outreach programs in Kenya.</p>
+</div>
+    </section>
+
+    <!-- FEATURED FUNDRAISING CAMPAIGN HIGHLIGHT -->
+    <section id="featured-campaign">
+      <div class="container">
+        <div class="card" style="display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 1rem; align-items: center;">
+          <!-- Campaign Details -->
+          <div>
+            <span class="pill">Featured Campaign</span>
+            <h3>SRNA Scholarships 2025</h3>
+            <p class="muted">Help fund exam fees and mentorship placements for Kenyan-origin SRNAs across the US.</p>
+            <div class="progress" aria-label="Progress toward scholarship fund goal">
+              <span style="width: 48%;"></span>
+            </div>
+            <small class="muted">$24,000 raised of $50,000 goal</small><br>
+            <div style="margin-top: 0.7rem;">
+              <a class="btn warn" href="donate.html">Donate Now</a>
+              <a class="btn ghost" href="donate.html">See All Campaigns</a>
+            </div>
+          </div>
+          <!-- Campaign Trust Points -->
+          <div class="card" style="background: linear-gradient(180deg, #fff, #f8fafc);">
+            <h3 style="margin-top: 0;">Why Donors Trust AKANA</h3>
+            <ul class="muted" style="margin-left: 1.2rem; list-style: disc;">
+              <li>Instant email receipts for every donation</li>
+              <li>Live campaign progress updates</li>
+              <li>Funds tracked transparently per initiative</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING EVENTS (Preview) -->
+    <section>
+      <div class="container">
+        <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+          <h2 style="margin:0;">Upcoming Events</h2>
+          <a href="events.html" class="btn ghost">View All</a>
+        </div>
+        <div class="list">
+          <!-- Event 1 -->
+          <div class="event">
+            <div class="date">
+              <b>Nov</b><span>15</span>
+            </div>
+            <div>
+              <div style="display:flex; justify-content: space-between; flex-wrap: wrap;">
+                <h3 style="margin: 0.1rem 0;">AKANA Virtual Grand Rounds</h3>
+                <span class="chip">Online</span>
+              </div>
+              <p class="muted">Best practices in airway management • 7:00 PM EAT</p>
+              <div style="display:flex; gap:0.5rem; flex-wrap: wrap;">
+                <a class="btn primary" href="#">Register</a>
+                <a class="btn ghost" href="#">Add to Calendar</a>
+              </div>
+            </div>
+          </div>
+          <!-- Event 2 -->
+          <div class="event">
+            <div class="date">
+              <b>Dec</b><span>05</span>
+            </div>
+            <div>
+              <div style="display:flex; justify-content: space-between; flex-wrap: wrap;">
+                <h3 style="margin: 0.1rem 0;">Mentorship Mixer — Nairobi</h3>
+                <span class="chip">In-person</span>
+              </div>
+              <p class="muted">Connect SRNAs with CRNA mentors • 5:30 PM EAT</p>
+              <div style="display:flex; gap:0.5rem; flex-wrap: wrap;">
+                <a class="btn primary" href="#">RSVP</a>
+                <a class="btn ghost" href="#">Directions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAINING PREVIEW -->
+    <section>
+      <div class="container">
+        <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+          <h2 style="margin:0;">Training &amp; Certification</h2>
+          <a href="training.html" class="btn ghost">Browse All</a>
+        </div>
+        <div class="grid cards-4">
+          <div class="card">
+            <span class="pill">Self-Paced • Certificate</span>
+            <h3>HIPAA for Healthcare Professionals (2025)</h3>
+            <p class="muted">Slides + 10-question check • ~15 mins</p>
+            <a class="btn primary" href="#">Start Course</a>
+          </div>
+          <div class="card">
+            <span class="pill">Self-Paced • Certificate</span>
+            <h3>Fraud, Waste &amp; Abuse Basics</h3>
+            <p class="muted">Identifying unacceptable practices • ~10 mins</p>
+            <a class="btn primary" href="#">Start Course</a>
+          </div>
+          <div class="card">
+            <span class="pill">Mentorship</span>
+            <h3>Becoming an Effective AKANA Mentor</h3>
+            <p class="muted">Conversation frameworks • ~12 mins</p>
+            <a class="btn primary" href="#">Start Course</a>
+          </div>
+          <div class="card">
+            <span class="pill">Clinical Update</span>
+            <h3>Airway Safety Refresher (2025)</h3>
+            <p class="muted">Case-based review • ~20 mins</p>
+            <a class="btn primary" href="#">Start Course</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST NEWS PREVIEW -->
+    <section>
+      <div class="container">
+        <h2>Latest News</h2>
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>AKANA Scholarship Cohort Announced</h3>
+            <p class="muted">Congratulations to the 2025 SRNA awardees, supporting their studies across the U.S.</p>
+            <a href="news.html">Read more &rarr;</a>
+          </article>
+          <article class="card">
+            <h3>Mission Trip Outcomes Report</h3>
+            <p class="muted">Summary of clinical impact and lessons learned from our recent outreach in Kenya.</p>
+            <a href="news.html">Read more &rarr;</a>
+          </article>
+          <article class="card">
+            <h3>Member Spotlight: Excellence in Practice</h3>
+            <p class="muted">Highlighting a CRNA leader’s mentorship and excellence in perioperative care.</p>
+            <a href="news.html">Read more &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (with Contact CTA snippet or full footer) -->
+  <footer>
+    <div class="container" style="display:flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center;">
+      <div>&copy; <span id="y"></span> AKANA — Association of Kenyan American Nurse Anesthetists</div>
+      <div>
+        <a href="#">Privacy</a> • 
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Year update and Mobile menu toggle -->
+  <script>
+    // Update footer year automatically
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Mobile menu toggle
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKANA – Events</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+<div class="brand">
+  <a href="index.html" class="brand-link" aria-label="AKANA — Home">
+    <img src="images/akana-logo.svg" alt="AKANA logo" width="40" height="40">
+    <span>AKANA</span>
+  </a>
+</div>
+      <nav>
+        <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="events.html"><strong>Events</strong></a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h1>Events Calendar</h1>
+        <p>Stay up to date with AKANA's upcoming events, workshops, and conferences. RSVP to join us, or add events to your calendar so you don’t miss out.</p>
+      </div>
+    </section>
+
+    <!-- Upcoming Events List -->
+    <section>
+      <div class="container list">
+        <!-- Event example 1 -->
+        <div class="event">
+          <div class="date"><b>Feb</b><span>22</span></div>
+          <div>
+            <div style="display:flex; justify-content: space-between; flex-wrap: wrap;">
+              <h3 style="margin: 0.1rem 0;">Nurse Anesthesia Resident (NAR) Workshop</h3>
+              <span class="chip">Virtual</span>
+            </div>
+            <p class="muted">A dynamic workshop for student nurse anesthetists featuring simulation training and Q&amp;A sessions. <br> <strong>Time:</strong> 7:00 PM - 9:00 PM EST (Feb 22, 2026)</p>
+            <div style="display:flex; gap:0.5rem; flex-wrap: wrap;">
+              <a class="btn primary" href="#">Register</a>
+              <a class="btn ghost" href="#">Add to Calendar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Event example 2 -->
+        <div class="event">
+          <div class="date"><b>Mar</b><span>10</span></div>
+          <div>
+            <div style="display:flex; justify-content: space-between; flex-wrap: wrap;">
+              <h3 style="margin: 0.1rem 0;">CANA Lobby Day 2026</h3>
+              <span class="chip">In-person</span>
+            </div>
+            <p class="muted">Join our California colleagues for a day at the Capitol in Sacramento to advocate for nurse anesthetists’ practice rights. <br><strong>Location:</strong> Sacramento, CA</p>
+            <div style="display:flex; gap:0.5rem; flex-wrap: wrap;">
+              <a class="btn primary" href="#">RSVP</a>
+              <a class="btn ghost" href="#">Add to Calendar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Event example 3 -->
+        <div class="event">
+          <div class="date"><b>May</b><span>16</span></div>
+          <div>
+            <div style="display:flex; justify-content: space-between; flex-wrap: wrap;">
+              <h3 style="margin: 0.1rem 0;">Virtual Spring Meeting 2026</h3>
+              <span class="chip">Virtual</span>
+            </div>
+            <p class="muted">Our annual spring conference goes virtual with two days of lectures, panel discussions, and networking opportunities. <br><strong>Date:</strong> May 16–17, 2026</p>
+            <div style="display:flex; gap:0.5rem; flex-wrap: wrap;">
+              <a class="btn primary" href="#">Register</a>
+              <a class="btn ghost" href="#">Add to Calendar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Additional event entries would follow in chronological order -->
+      </div>
+    </section>
+
+    <!-- Past Events / Archive Notice -->
+    <section>
+      <div class="container card">
+        <h3>Past Events</h3>
+        <p class="muted">Looking for recaps or materials from past events? Visit our <a href="news.html">News</a> page for event summaries and photo galleries, or check out our <a href="#">Events Archive</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="y"></span> AKANA – Events</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKANA Admin Dashboard (Preview)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Admin Dashboard Main Content -->
+  <div class="container" style="padding: 2rem 0 3rem;">
+    <h2 style="margin-top:0;">Admin Dashboard (Preview)</h2>
+    <div class="dash-grid">
+      <!-- Sidebar Navigation -->
+      <aside class="side">
+        <h4>Admin</h4>
+        <a href="#">Overview</a>
+        <a href="#">Members</a>
+        <a href="#">Training</a>
+        <a href="#">Donations</a>
+        <a href="#">Events</a>
+        <a href="#">Content</a>
+        <a href="index.html">← Back to Site</a>
+      </aside>
+      <!-- Admin Content Panel -->
+      <div class="panel">
+        <!-- KPI Metrics -->
+        <div class="kpis">
+          <div class="kpi">
+            <small>Total Members</small>
+            <h3>1,248</h3>
+            <small>↑ 6% MoM</small>
+          </div>
+          <div class="kpi">
+            <small>Active SRNAs</small>
+            <h3>312</h3>
+            <small>↑ 3% MoM</small>
+          </div>
+          <div class="kpi">
+            <small>Donations (YTD)</small>
+            <h3>$86,400</h3>
+            <small>48% of goal</small>
+          </div>
+          <div class="kpi">
+            <small>Certificates Issued</small>
+            <h3>2,041</h3>
+            <small>↑ 12% MoM</small>
+          </div>
+        </div>
+        <!-- Charts Row -->
+        <div class="grid cards-3" style="margin-top: 1rem;">
+          <div class="card">
+            <h3>Membership Trend</h3>
+            <div class="chart" id="chartMembers" aria-label="Membership trend (monthly)"></div>
+          </div>
+          <div class="card">
+            <h3>Donations by Campaign</h3>
+            <div class="chart" id="chartDonations" aria-label="Donations by campaign"></div>
+          </div>
+          <div class="card">
+            <h3>Training Completions</h3>
+            <div class="chart" id="chartTraining" aria-label="Training completions trend"></div>
+          </div>
+        </div>
+      </div> <!-- /.panel -->
+    </div> <!-- /.dash-grid -->
+  </div>
+
+  <footer>
+    <div class="container">
+      <p style="text-align: center;">&copy; <span id="y"></span> AKANA – Admin Preview</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Generate dummy bar charts data
+    const membersData = [18,22,16,26,30,28,34,40,38,44];
+    const donationsData = [10,14,8,18,22,16,30,26,24,28];
+    const trainingData = [8,12,10,14,18,16,22,26,20,28];
+    function renderBars(id, data) {
+      const container = document.getElementById(id);
+      if(!container) return;
+      container.innerHTML = '';
+      data.forEach(val => {
+        const bar = document.createElement('div');
+        bar.className = 'bar';
+        bar.style.height = (10 + val * 3) + 'px';
+        container.appendChild(bar);
+      });
+    }
+    // Render charts on load
+    renderBars('chartMembers', membersData);
+    renderBars('chartDonations', donationsData);
+    renderBars('chartTraining', trainingData);
+  </script>
+</body>
+</html>

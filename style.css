@@ -1,0 +1,386 @@
+:root {
+  --ink: #0f172a;           /* deep navy text */
+  --bg: #ffffff;           /* page background */
+  --muted: #f5f7fb;        /* light grey background */
+  --brand: #1e40af;        /* brand navy blue */
+  --brand-600: #1d4ed8;    /* hover/link blue */
+  --accent: #047857;       /* accent green */
+  --accent-2: #dc2626;     /* accent red */
+  --gold: #b45309;         /* gold (for progress bars) */
+  --card: #ffffff;         /* card background (white) */
+  --border: #e5e7eb;       /* light grey border color */
+  --shadow: 0 6px 20px rgba(2, 6, 23, 0.08); /* soft shadow */
+  --radius: 16px;          /* border radius for cards */
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  scroll-behavior: smooth;
+}
+a {
+  color: var(--brand-600);
+  text-decoration: none;
+}
+.container {
+  width: min(1200px, 90vw);
+  margin-inline: auto;
+  /* The container class centers content and limits width */
+}
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-align: center;
+}
+.btn.primary {
+  background: var(--brand);
+  color: #fff;
+}
+.btn.ghost {
+  border: 2px solid var(--brand);
+  color: var(--brand);
+}
+.btn.alt {
+  background: var(--accent);
+  color: #fff;
+}
+.btn.warn {
+  background: var(--accent-2);
+  color: #fff;
+}
+/* Header Styles */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #ffffffd6; /* translucent white */
+  backdrop-filter: saturate(1.2) blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+}
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+}
+header .brand svg {
+  width: 34px;
+  height: 34px;
+}
+/* Clickable brand (logo + wordmark) */
+.brand-link{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  text-decoration:none;
+  color:inherit;           /* don’t use the default link blue */
+}
+.brand-link img{
+  height:34px;             /* matches your current SVG size */
+  width:auto;
+  display:block;
+}
+.brand-link:hover{ text-decoration:none; }
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav a {
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  color: #0b1220;
+}
+header nav a:hover {
+  background: var(--muted);
+}
+header .cta {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+header .hamburger {
+  display: none;
+  cursor: pointer;
+}
+/* Hero Section */
+.hero {
+  background: linear-gradient(180deg, #f7fafc 0%, #fff 100%);
+  border-bottom: 1px solid var(--border);
+}
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3.5rem 0;
+}
+.hero .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #eef2ff;
+  color: #1e3a8a;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.hero h1 {
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  margin: 0.6rem 0 1rem;
+}
+.hero p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+.hero-graphic {
+  background: 
+    radial-gradient(40% 60% at 60% 30%, rgba(29,78,216,0.1), transparent 70%),
+    radial-gradient(40% 60% at 30% 70%, rgba(4,120,87,0.1), transparent 70%),
+    #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+/* Flags bar (Kenya and US) */
+.flagbar {
+  display: flex;
+  gap: 0.5rem;
+}
+.flag {
+  flex: 1;
+  height: 10px;
+  border-radius: 999px;
+}
+.flag.ke {
+  background: linear-gradient(#000 0 33%, #b91c1c 33% 66%, #047857 66% 100%);
+}
+.flag.us {
+  background: linear-gradient(90deg, #1d4ed8 0 50%, #dc2626 50% 100%);
+}
+/* Sections spacing */
+section {
+  padding: 2.8rem 0;
+}
+/* Grid utilities for cards */
+.grid {
+  display: grid;
+  gap: 1.1rem;
+}
+.cards-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.cards-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem;
+  box-shadow: var(--shadow);
+}
+.card h3 {
+  margin: 0.2rem 0 0.5rem;
+}
+.muted {
+  color: #475569; /* muted text for descriptions */
+}
+/* List styles for events, etc. */
+.list {
+  display: grid;
+  gap: 0.6rem;
+}
+.event {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.8rem;
+}
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0ea5e9;
+  color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  height: 80px;
+}
+.date b {
+  font-size: 1.1rem;
+}
+.chip {
+  display: inline-block;
+  background: #e2e8f0;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+/* Progress bar (for campaigns) */
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #eef2ff;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+.progress > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), #f59e0b);
+  width: 0%; /* to be dynamically adjusted or set inline */
+}
+/* Admin Dashboard Styles */
+#dashboard { /* (not used in separate admin page, but kept for consistency) */
+  display: none;
+}
+.dash-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1rem;
+}
+.side {
+  background: #0b1220;
+  color: #e5e7eb;
+  border-radius: 16px;
+  padding: 1rem;
+}
+.side h4 {
+  margin: 0.4rem 0 1rem;
+}
+.side a {
+  display: block;
+  color: #e5e7eb;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.side a:hover {
+  background: #111827;
+}
+.panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.kpi {
+  padding: 1.1rem;
+  border-radius: var(--radius);
+  background: #0f172a;
+  color: #fff;
+}
+.kpi small {
+  opacity: 0.8;
+  display: block;
+}
+.kpi h3 {
+  margin: 0.3rem 0;
+}
+.chart {
+  height: 210px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f1f5f9, #fff);
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  padding: 1rem;
+  border: 1px dashed #cbd5e1;
+}
+.bar {
+  width: 10%;
+  background: linear-gradient(180deg, #60a5fa, #1e40af);
+  border-radius: 8px 8px 0 0;
+}
+/* Footer */
+footer {
+  padding: 2.5rem 0;
+  background: #0b1220;
+  color: #cbd5e1;
+  text-align: center;
+}
+footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/* Responsive Design - Mobile Styles */
+@media (max-width: 960px) {
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-graphic {
+    margin-top: 2rem;
+  }
+  .cards-3, .cards-4 {
+    grid-template-columns: 1fr;
+  }
+  .kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header nav ul {
+    display: none; /* hide menu links in mobile, show hamburger */
+  }
+  header .hamburger {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+    background: #fff;
+  }
+  header nav.open ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* below header */
+    right: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  header nav.open ul a {
+    color: #0f172a;
+    /* menu items will stack, default styles apply */
+  }
+}

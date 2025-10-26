@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKANA – Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+<div class="brand">
+  <a href="index.html" class="brand-link" aria-label="AKANA — Home">
+    <img src="images/akana-logo.svg" alt="AKANA logo" width="40" height="40">
+    <span>AKANA</span>
+  </a>
+</div>
+      <nav>
+        <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html"><strong>Contact</strong></a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container grid cards-3">
+        <!-- Contact Info Card -->
+        <div class="card">
+          <h3>Contact AKANA</h3>
+          <p class="muted">Questions about membership, training, donations, or partnerships? We’d love to hear from you.</p>
+          <p class="muted">
+            <b>Email:</b> info@akana.org<br>
+            <b>Phone:</b> +1 (123) 456-7890
+          </p>
+          <p class="muted">
+            <b>Address:</b><br>
+            123 Main Street,<br>
+            Anytown, USA 
+          </p>
+        </div>
+        <!-- Contact Form Card -->
+        <form class="card" onsubmit="event.preventDefault(); alert('Thanks! Your message has been sent.'); this.reset();">
+          <h3>Send a Message</h3>
+          <div style="display: grid; gap: 0.6rem;">
+            <input type="text" required placeholder="Full Name" style="padding: 0.7rem; border:1px solid var(--border); border-radius:12px;" />
+            <input type="email" required placeholder="Email Address" style="padding: 0.7rem; border:1px solid var(--border); border-radius:12px;" />
+            <input type="text" placeholder="Subject" style="padding: 0.7rem; border:1px solid var(--border); border-radius:12px;" />
+            <textarea rows="4" required placeholder="Your Message..." style="padding: 0.7rem; border:1px solid var(--border); border-radius:12px;"></textarea>
+            <button class="btn primary" type="submit">Send</button>
+          </div>
+        </form>
+        <!-- Quick Links/Social Card -->
+        <div class="card">
+          <h3>Quick Links</h3>
+          <ul class="muted" style="margin-left: 1.1rem; list-style: disc;">
+            <li><a href="membership.html">Join / Renew Membership</a></li>
+            <li><a href="training.html">Training Portal</a></li>
+            <li><a href="events.html">Upcoming Events</a></li>
+            <li><a href="donate.html">Donate Now</a></li>
+          </ul>
+          <p class="muted">Follow us: 
+            <a href="#">LinkedIn</a> • 
+            <a href="#">Twitter</a> • 
+            <a href="#">Facebook</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Map Placeholder -->
+    <section>
+      <div class="container card">
+        <h3>Our Location</h3>
+        <p class="muted">AKANA is a national organization with members across the U.S. Our administrative office is based in Anytown (see map below).</p>
+        <div style="background:#e2e8f0; height: 300px; border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #475569;">
+          Map Placeholder
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="y"></span> AKANA – Contact</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

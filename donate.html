@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKANA – Donate</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+<div class="brand">
+  <a href="index.html" class="brand-link" aria-label="AKANA — Home">
+    <img src="images/akana-logo.svg" alt="AKANA logo" width="40" height="40">
+    <span>AKANA</span>
+  </a>
+</div>
+      <nav>
+        <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="donate.html"><strong>Donate</strong></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn primary" href="donate.html">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Donate Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Support AKANA</h1>
+        <p>Join us in empowering nurse anesthetists and improving healthcare. Your donation fuels scholarships, training, and outreach that make a difference in our community and abroad.</p>
+        <a class="btn warn" href="#donate-form">Donate Now</a>
+      </div>
+    </section>
+
+    <!-- Active Campaigns -->
+    <section>
+      <div class="container">
+        <h2>Current Campaigns</h2>
+        <div class="grid cards-2">
+          <!-- Campaign 1 -->
+          <div class="card">
+            <h3>SRNA Scholarships 2025</h3>
+            <p class="muted">Funding exam fees and clinical training for student nurse anesthetists of Kenyan heritage.</p>
+            <div class="progress"><span style="width: 50%;"></span></div>
+            <small class="muted">$25,000 of $50,000 goal</small><br>
+            <a class="btn warn" href="#donate-form">Donate</a>
+          </div>
+          <!-- Campaign 2 -->
+          <div class="card">
+            <h3>Medical Mission 2024</h3>
+            <p class="muted">Supporting a surgical camp in Kenya by providing anesthesia supplies and volunteer travel.</p>
+            <div class="progress"><span style="width: 80%;"></span></div>
+            <small class="muted">$8,000 of $10,000 goal</small><br>
+            <a class="btn warn" href="#donate-form">Donate</a>
+          </div>
+        </div>
+        <!-- More campaigns can be added similarly -->
+        <p class="muted" style="margin-top: 1rem; font-size: 0.9rem;">
+          * All donations are tax-deductible and you will receive an emailed receipt. Progress updates are posted regularly for each campaign.
+        </p>
+      </div>
+    </section>
+
+    <!-- General Donation Form -->
+    <section id="donate-form">
+      <div class="container card">
+        <h2>Make a General Donation</h2>
+        <p>Your contribution of any amount is greatly appreciated and will be applied where it's needed most (education, events, or outreach).</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you for your generous donation!'); this.reset();">
+          <div style="display: grid; gap: 0.8rem; max-width: 400px; margin: 0 auto;">
+            <input type="number" min="1" step="any" required placeholder="Donation Amount (USD)" style="padding: 0.7rem; border:1px solid var(--border); border-radius: 8px;" />
+            <input type="text" required placeholder="Full Name" style="padding: 0.7rem; border:1px solid var(--border); border-radius: 8px;" />
+            <input type="email" required placeholder="Email (for receipt)" style="padding: 0.7rem; border:1px solid var(--border); border-radius: 8px;" />
+            <!-- In real implementation, payment details or integration with Stripe/PayPal would go here -->
+            <button class="btn primary" type="submit">Donate Securely</button>
+          </div>
+        </form>
+        <p class="muted" style="margin-top: 1rem; font-size: 0.9rem; text-align: center;">
+          <strong>Payment methods:</strong> Visa, MasterCard, Amex, PayPal 
+          <br><em>Processed securely via Stripe</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Donate / Impact -->
+    <section>
+      <div class="container">
+        <h2>Your Impact</h2>
+        <div class="grid cards-3">
+          <div class="card">
+            <h3>Empower Education</h3>
+            <p class="muted">Your donation provides scholarships and resources for nurse anesthesia students, helping to build the next generation of CRNAs.</p>
+          </div>
+          <div class="card">
+            <h3>Strengthen Healthcare</h3>
+            <p class="muted">Funds contribute to medical missions and training workshops that improve patient care in underserved areas.</p>
+          </div>
+          <div class="card">
+            <h3>Foster Community</h3>
+            <p class="muted">Donations support events and networking that keep our community of professionals connected and thriving.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center;">
+      <p>&copy; <span id="y"></span> AKANA – Thank you for your support!</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

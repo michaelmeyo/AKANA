@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKANA – Membership</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+<div class="brand">
+  <a href="index.html" class="brand-link" aria-label="AKANA — Home">
+    <img src="images/akana-logo.svg" alt="AKANA logo" width="40" height="40">
+    <span>AKANA</span>
+  </a>
+</div>
+      <nav>
+        <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html"><strong>Membership</strong></a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost" href="#">Member Login</a>
+        <a class="btn primary" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Membership Tiers -->
+    <section>
+      <div class="container">
+        <h1>Membership</h1>
+        <p>Join AKANA and become part of a supportive community dedicated to professional growth and cultural heritage. Select the membership tier that applies to you:</p>
+        <div class="grid cards-3">
+          <!-- Tier 1: CRNA -->
+          <div class="card">
+            <h3>CRNA Member</h3>
+            <p class="muted"><strong>Certified Registered Nurse Anesthetist</strong><br>
+            Practicing CRNAs in the U.S.</p>
+            <p>Annual Dues: <strong>$100</strong></p>
+            <ul class="muted" style="margin-left: 1rem; list-style: disc;">
+              <li>Full access to training and events</li>
+              <li>Voting rights in AKANA elections</li>
+              <li>Eligible to mentor SRNAs</li>
+            </ul>
+            <a class="btn primary" href="#join-form">Join Now</a>
+          </div>
+          <!-- Tier 2: SRNA -->
+          <div class="card">
+            <h3>SRNA Member</h3>
+            <p class="muted"><strong>Student Registered Nurse Anesthetist</strong><br>
+            Graduate students in anesthesia programs.</p>
+            <p>Annual Dues: <strong>$50</strong></p>
+            <ul class="muted" style="margin-left: 1rem; list-style: disc;">
+              <li>Access to mentorship programs</li>
+              <li>Discounted event registration</li>
+              <li>Eligible for AKANA scholarships</li>
+            </ul>
+            <a class="btn primary" href="#join-form">Join Now</a>
+          </div>
+          <!-- Tier 3: Associate RN -->
+          <div class="card">
+            <h3>Associate (RN)</h3>
+            <p class="muted"><strong>Registered Nurse Affiliate</strong><br>
+            RNs interested in anesthesia or in training.</p>
+            <p>Annual Dues: <strong>$50</strong></p>
+            <ul class="muted" style="margin-left: 1rem; list-style: disc;">
+              <li>Newsletter subscription</li>
+              <li>Access to select events</li>
+              <li>Volunteer opportunities</li>
+            </ul>
+            <a class="btn primary" href="#join-form">Join Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Benefits -->
+    <section>
+      <div class="container card">
+        <h2>Member Benefits</h2>
+        <ul class="muted" style="margin-left: 1.2rem; list-style: disc;">
+          <li>Networking with a community of Kenyan-American anesthesia professionals</li>
+          <li>Access to exclusive AKANA training modules and continuing education credits</li>
+          <li>Mentorship opportunities – either as mentor or mentee – through our structured programs</li>
+          <li>Eligibility for scholarships and grants offered by AKANA to its members</li>
+          <li>Regular newsletters and updates on anesthesia practice and global health outreach</li>
+          <li>Leadership opportunities within AKANA committees and boards</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Join Form -->
+    <section id="join-form">
+      <div class="container">
+        <h2>Join AKANA Now</h2>
+        <p>Fill out the form below to create your membership. We will follow up with a confirmation email and payment instructions.</p>
+        <form class="card" onsubmit="event.preventDefault(); alert('Thank you for joining AKANA!'); this.reset();">
+          <div style="display: grid; gap: 0.8rem;">
+            <input type="text" required placeholder="Full Name" style="padding: 0.7rem; border:1px solid var(--border); border-radius: 8px;" />
+            <input type="email" required placeholder="Email Address" style="padding: 0.7rem; border:1px solid var(--border); border-radius: 8px;" />
+            <select required style="padding: 0.7rem; border:1px solid var(--border); border-radius: 8px;">
+              <option value="">Select Membership Tier</option>
+              <option>CRNA Member</option>
+              <option>SRNA Member</option>
+              <option>Associate (RN)</option>
+            </select>
+            <input type="text" placeholder="State/Country of Residence" style="padding: 0.7rem; border:1px solid var(--border); border-radius: 8px;" />
+            <button class="btn primary" type="submit">Submit Application</button>
+          </div>
+        </form>
+        <p class="muted" style="margin-top: 1rem; font-size: 0.9rem;">
+          Note: After submitting, you will receive an email with payment instructions to complete your membership registration. 
+          If you have any questions, please <a href="contact.html">contact us</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="y"></span> AKANA – Membership</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

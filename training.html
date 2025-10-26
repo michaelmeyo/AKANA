@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKANA – Training</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+<div class="brand">
+  <a href="index.html" class="brand-link" aria-label="AKANA — Home">
+    <img src="images/akana-logo.svg" alt="AKANA logo" width="40" height="40">
+    <span>AKANA</span>
+  </a>
+</div>
+      <nav>
+        <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="training.html"><strong>Training</strong></a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost" href="#">Member Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Training Catalog Intro -->
+    <section>
+      <div class="container">
+        <h1>Training &amp; Certification</h1>
+        <p>Browse our catalog of training courses. These courses are designed for busy nurse anesthetists and students, offering certificates upon completion. Members can take all courses for free as part of their benefits.</p>
+        <!-- (Optional search/filter could be here) -->
+      </div>
+    </section>
+
+    <!-- Course Listing -->
+    <section>
+      <div class="container grid cards-3">
+        <!-- Course 1 -->
+        <div class="card">
+          <span class="pill">Self-Paced • Certificate</span>
+          <h3>HIPAA for Healthcare Professionals (2025)</h3>
+          <p class="muted">Understand patient privacy rules. Slides + quiz • 15 minutes.</p>
+          <a class="btn primary" href="#">Start Course</a>
+        </div>
+        <!-- Course 2 -->
+        <div class="card">
+          <span class="pill">Self-Paced • Certificate</span>
+          <h3>Fraud, Waste &amp; Abuse Basics</h3>
+          <p class="muted">Learn to identify and prevent FWA. Interactive slides • 10 minutes.</p>
+          <a class="btn primary" href="#">Start Course</a>
+        </div>
+        <!-- Course 3 -->
+        <div class="card">
+          <span class="pill">Mentorship</span>
+          <h3>Becoming an Effective AKANA Mentor</h3>
+          <p class="muted">Best practices for mentoring SRNAs. Video + quiz • 12 minutes.</p>
+          <a class="btn primary" href="#">Start Course</a>
+        </div>
+        <!-- Course 4 -->
+        <div class="card">
+          <span class="pill">Clinical Update</span>
+          <h3>Airway Safety Refresher (2025)</h3>
+          <p class="muted">Latest in airway management protocols. Article + Q&amp;A • 20 minutes.</p>
+          <a class="btn primary" href="#">Start Course</a>
+        </div>
+        <!-- Additional courses would continue similarly -->
+      </div>
+    </section>
+
+    <!-- How it works / Certificates Info -->
+    <section>
+      <div class="container card">
+        <h2>How the Certificate Courses Work</h2>
+        <p class="muted">
+          Each course consists of a brief learning module (slides, video, or reading) followed by a 10-question assessment. 
+          Upon scoring 80% or higher, you will instantly receive a personalized certificate of completion (PDF) via email.
+        </p>
+        <p class="muted">
+          AKANA members' course completions are tracked in your profile, so you can download your certificates anytime.
+          These certificates may be used for CPD/CME credits as applicable.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="y"></span> AKANA – Training</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

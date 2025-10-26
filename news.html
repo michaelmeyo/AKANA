@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKANA – News</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+<div class="brand">
+  <a href="index.html" class="brand-link" aria-label="AKANA — Home">
+    <img src="images/akana-logo.svg" alt="AKANA logo" width="40" height="40">
+    <span>AKANA</span>
+  </a>
+</div>
+      <nav>
+        <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html"><strong>News</strong></a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost" href="membership.html">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h1>AKANA News &amp; Updates</h1>
+        <p>Read the latest updates, announcements, and member spotlights from the AKANA community. Stay informed about our advocacy, events, and achievements.</p>
+      </div>
+    </section>
+
+    <!-- News Articles Listing -->
+    <section>
+      <div class="container grid cards-3">
+        <!-- Article 1 -->
+        <article class="card">
+          <h3>AKANA Scholarship Cohort Announced</h3>
+          <p class="muted">AKANA is proud to announce the recipients of the 2025 Student Scholarship Awards. These five outstanding SRNAs will receive financial support and mentorship to advance their anesthesia training. <small><em>(Oct 10, 2025)</em></small></p>
+          <a href="#" onclick="alert('This would open the full article page.');">Read more &rarr;</a>
+        </article>
+        <!-- Article 2 -->
+        <article class="card">
+          <h3>Mission Trip Outcomes Report</h3>
+          <p class="muted">Our volunteer team returned from Kenya last month. Over two weeks, they assisted in 40 surgeries and trained local staff in new anesthesia protocols. Read about the lives touched and lessons learned in our detailed report. <small><em>(Sep 1, 2025)</em></small></p>
+          <a href="#" onclick="alert('This would open the full article page.');">Read more &rarr;</a>
+        </article>
+        <!-- Article 3 -->
+        <article class="card">
+          <h3>Member Spotlight: Dr. John Doe, CRNA</h3>
+          <p class="muted">In this month’s spotlight, we interview Dr. John Doe, a CRNA who has been instrumental in advancing pain management practices. John shares his journey from Kenya to leading a department in the US. <small><em>(Aug 20, 2025)</em></small></p>
+          <a href="#" onclick="alert('This would open the full article page.');">Read more &rarr;</a>
+        </article>
+        <!-- More articles could be listed similarly -->
+      </div>
+      <p class="muted" style="text-align:center; margin-top: 1.5rem;">
+        <em>Showing latest news. Browse our archives for older updates.</em>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="y"></span> AKANA – News</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
